@@ -10,14 +10,20 @@ class Coche:
         self._marca = value
 
     @property
-    def
+    def modelo(self):
+        return self._modelo
 
+    @modelo.setter
+    def modelo(self, value):
+        self._marca = value
 
-    def setModelo(self, modelo):
-        self.modelo = modelo
+    @property
+    def anio(self):
+        return self._anio
 
-    def setAnio(self, anio):
-        self.anio = anio
+    @anio.setter
+    def anio(self, value):
+        self._anio = value
 
     def descripcion(self):
         print("Coche " +self.marca + " del año " + str(self.anio)+ " Modelo " + self.modelo)
@@ -28,4 +34,5 @@ class Coche:
         self._modelo = modelo
         self._anio = anio
 
-
+    def __str__(self):
+        return f"Coche : {self.marca} {self.modelo } ({self.anio})"
