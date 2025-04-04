@@ -2,6 +2,8 @@ import sys
 
 from BankAccount import BankAccount
 from Coche import Coche
+from Gato import Gato
+from Perro import Perro
 from Persona import Persona
 
 if __name__ == '__main__':
@@ -17,6 +19,12 @@ if __name__ == '__main__':
 
     cuenta.depositar(1000000)
 
-    cuenta.retirar("aaa")
+    cuenta.retirar(100)
 
     print(cuenta.mostrar_saldo())
+
+    fido = Perro("Fido")
+    garfield = Gato("garfield")
+
+    print(fido.sonido())
+    print(garfield.sonido())
