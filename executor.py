@@ -3,9 +3,11 @@ import sys
 from BankAccount import BankAccount
 from Coche import Coche
 from Gato import Gato
+from Inventory import Inventory
 from Libro import Libro
 from Perro import Perro
 from Persona import Persona
+from Product import Product
 
 if __name__ == '__main__':
     julio = Persona(18 , "Julio")
@@ -36,7 +38,14 @@ if __name__ == '__main__':
     for t,a,an in books:
         Libro(t,a,an)
 
-
-
     Libro.mostrar_libros()
 
+    prod = [("jabon",2.2,1),("cafe",3.3,3),
+            ("azucar",4.4,1),("chocolate",3.4,3)]
+
+
+    for n,p,q in prod:
+        Inventory.agregar_producto(Product(n,p,q))
+
+    print(Inventory.buscar_producto("Azucar"))
+    print(Inventory.summar_precios())
