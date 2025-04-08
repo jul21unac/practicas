@@ -2,6 +2,7 @@ import sys
 
 from BankAccount import BankAccount
 from Coche import Coche
+from Figura import cuadrado
 from Gato import Gato
 from Inventory import Inventory
 from Libro import Libro
@@ -49,3 +50,7 @@ if __name__ == '__main__':
 
     print(Inventory.buscar_producto("Azucar"))
     print(Inventory.summar_precios())
+
+
+    c = cuadrado(1)
+    c.lado = 2
