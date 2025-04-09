@@ -2,9 +2,10 @@ import sys
 
 from BankAccount import BankAccount
 from Coche import Coche
-from Figura import cuadrado
+from Figura import Cuadrado
 from Gato import Gato
 from Inventory import Inventory
+from Juego import Juego
 from Libro import Libro
 from Perro import Perro
 from Persona import Persona
@@ -52,5 +53,8 @@ if __name__ == '__main__':
     print(Inventory.summar_precios())
 
 
-    c = cuadrado(1)
+    c = Cuadrado(1)
     c.lado = 2
+
+    game = Juego()
+    game.jugar()
