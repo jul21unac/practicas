@@ -10,9 +10,10 @@ from Libro import Libro
 from Perro import Perro
 from Persona import Persona
 from Product import Product
+import random
 
 if __name__ == '__main__':
-    julio = Persona(18 , "Julio")
+    julio = Persona("Julio",43,"MAdrid" )
     julio.saludo()
     print(julio)
 
@@ -58,3 +59,10 @@ if __name__ == '__main__':
 
     game = Juego()
     game.jugar()
+
+
+
+
+    mylist = ["apple", "banana", "cherry"]
+
+    print(random.choice(mylist))
