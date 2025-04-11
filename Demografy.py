@@ -2,14 +2,7 @@ from random import randrange
 from random import choice
 from pyspark.sql import SparkSession, Window
 from pyspark.sql import functions as f
-
-from pyspark.sql.functions import coalesce, expr
-
 from Persona import Persona
-from lib.utils import get_spark_app_config, load_survey_json_df, load_survey_parquet_df, load_survey_no_schema, \
-    load_survey_no_schema_semi_col
-from lib.utils import load_survey_df
-
 from lib.logger import Log4J
 
 def generatePeople(cantidad, ciudades):

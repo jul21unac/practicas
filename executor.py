@@ -12,6 +12,8 @@ from Persona import Persona
 from Product import Product
 import random
 
+from Rectangulo import Rectangulo
+
 if __name__ == '__main__':
     julio = Persona("Julio",43,"MAdrid" )
     julio.saludo()
@@ -66,3 +68,5 @@ if __name__ == '__main__':
     mylist = ["apple", "banana", "cherry"]
 
     print(random.choice(mylist))
+
+    c = Rectangulo(1,0)
