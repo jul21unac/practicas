@@ -6,7 +6,7 @@ from Persona import Persona
 from lib.logger import Log4J
 
 def generatePeople(cantidad, ciudades):
-    return [Persona(randrange(18, 80),f'Nombre_{x}',choice(ciudades)) for x in range(cantidad)]
+    return [Persona(f'Nombre_{x}',randrange(18, 80),choice(ciudades)) for x in range(cantidad)]
 
 if __name__ == "__main__":
     spark = SparkSession \
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     list_Ciudades = ["Madrid", "Bilbao","Barcelona", "Asturias"]
     listPersonas = generatePeople(100,list_Ciudades)
 
-    peopleDF = spark.sparkContext.parallelize([[p.nombre,p.edad,p.ciudad] for p in listPersonas]).toDF(['edad','nombre','ciudad'])
+    peopleDF = spark.sparkContext.parallelize([[p.nombre,p.edad,p.ciudad] for p in listPersonas]).toDF(['nombre','edad','ciudad'])
 
     peopleDFoversixtyDF = peopleDF.where("edad >60")
 

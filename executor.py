@@ -69,4 +69,6 @@ if __name__ == '__main__':
 
     print(random.choice(mylist))
 
-    c = Rectangulo(1,0)
+    c = Rectangulo(1,1)
+
+    print(c)
