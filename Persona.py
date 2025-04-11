@@ -1,6 +1,12 @@
+from dataclasses import dataclass
 
 
+@dataclass
 class Persona :
+
+    _nombre :str
+    _edad : int
+    _ciudad : str
 
     def saludo(self):
         print("Hola "+ self.nombre + " " + str(self.edad))
@@ -21,9 +27,12 @@ class Persona :
     def edad(self, value):
         self._edad = value
 
-    def __init__(self,edad, nombre):
-        self._nombre = nombre
-        self._edad = edad
+    @property
+    def ciudad(self):
+        return self._ciudad
 
-    def __str__(self):
-        return f"Persona : {self.nombre } ({self.edad})"
+    @ciudad.setter
+    def ciudad(self,value):
+        self._ciudad = value
+
+
