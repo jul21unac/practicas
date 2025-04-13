@@ -1,6 +1,6 @@
 class Log4J:
     def __init__(self, spark):
-        root_class = "guru.learningjournal.spark.examples"
+        root_class = "julio.spark.examples"
         conf = spark.sparkContext.getConf()
         app_name = conf.get("spark.app.name")
         log4j = spark._jvm.org.apache.log4j

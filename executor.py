@@ -19,7 +19,7 @@ if __name__ == '__main__':
     julio.saludo()
     print(julio)
 
-    volvo = Coche("Volvo","station vagon",1983)
+    volvo = Coche(5555,"station vagon",1983,15616,46545646)
     volvo.descripcion()
     print(volvo)
 
