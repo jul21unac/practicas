@@ -21,7 +21,7 @@ class Coche:
     @modelo.setter
     def modelo(self, value):
         validateString("modelo", value)
-        self._marca = value
+        self._modelo = value
 
     @property
     def anio(self):
