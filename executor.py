@@ -19,17 +19,18 @@ if __name__ == '__main__':
     julio.saludo()
     print(julio)
 
-    volvo = Coche(5555,"station vagon",1983,15616,46545646)
+    volvo = Coche("Fiat","station vagon",1983,15616,46545646)
     volvo.descripcion()
     print(volvo)
 
-    cuenta = BankAccount("Julio")
+    cuenta = BankAccount("Julio", "Ahorro")
 
     cuenta.depositar(1000000)
 
     cuenta.retirar(100)
 
     print(cuenta.mostrar_saldo())
+    print(cuenta)
 
     fido = Perro("Fido")
     garfield = Gato("garfield")
@@ -69,6 +70,6 @@ if __name__ == '__main__':
 
     print(random.choice(mylist))
 
-    c = Rectangulo(1,1)
+    c = Rectangulo(1,1, "Azul")
 
     print(c)

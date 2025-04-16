@@ -21,8 +21,9 @@ if __name__ == "__main__":
 
     cars = generateAutomotiveFleet(200, lista_modelo,lista_marca)
 
-    carsDF = spark.sparkContext.parallelize([ l.marca, l.modelo, l.precio , l.anio, l.kilometraje ] for l in cars)\
-              .toDF(["Marca", "Modelo", "Precio", "Anio", "Kilometro"])
+    tupla_cars = [ (l.marca, l.modelo, l.precio , l.anio, l.kilometraje ) for l in cars]
+    carsDF = spark.sparkContext.parallelize(tupla_cars).toDF(["Marca", "Modelo", "Precio", "Anio", "Kilometro"])
+
 
     carsDF.show(10)
 

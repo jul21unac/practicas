@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     listRectangle = generateRectangle(50,listColor)
 
-    rectangleDF = spark.sparkContext.parallelize([r.__str__(), r.area(),r.perimetro(), r.color] for r in listRectangle).toDF(["rectangle","area","perimetro", "color"])
+    rectangleDF = spark.sparkContext.parallelize([(r.__str__(), r.area(),r.perimetro(), r.color) for r in listRectangle]).toDF(["rectangle","area","perimetro", "color"])
 
     rectanglehiguerhundred=rectangleDF.where('area >100')
 
