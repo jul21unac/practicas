@@ -1,3 +1,6 @@
+from lib.Validatos import validateNumber
+
+
 class Product:
 
     @property
@@ -7,6 +10,7 @@ class Product:
     @name.setter
     def name(self,value):
         self._name = value
+
 
     @property
     def price(self):
@@ -25,11 +29,21 @@ class Product:
     def quantity(self, value):
         self._quantity = value
 
-    def __init__(self, name, price, quantity):
+    @property
+    def umbral_minimo(self):
+        return self._umbral_minimo
+
+    @umbral_minimo.setter
+    def umbral_minimo(self, value):
+        validateNumber("Umbral Minimo", value)
+        self._umbral_minimo = value
+
+    def __init__(self, name, price, quantity, umbral_minimo):
         self._name = name
         self.valida_precio(price)
         self._price = price
         self._quantity = quantity
+        self._umbral_minimo = umbral_minimo
 
     @staticmethod
     def valida_precio(value):
@@ -39,3 +53,9 @@ class Product:
             raise ValueError("The number should be higher than 0")
 
 
+    def verifica_alerta(self):
+
+        return  self._quantity - self._umbral_minimo <=1
+
+    def __str__(self):
+        return f'Product {self.name} quantity {self.quantity}'

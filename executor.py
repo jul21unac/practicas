@@ -32,9 +32,8 @@ if __name__ == '__main__':
     print(cuenta.mostrar_saldo())
     print(cuenta)
 
-    fido = Perro("Fido")
-    garfield = Gato("garfield")
-
+    fido = Perro("Fido",23,'chihuahu')
+    garfield = Gato("garfield", 12,"raza1")
     print(fido.sonido())
     print(garfield.sonido())
 
@@ -42,20 +41,29 @@ if __name__ == '__main__':
              ("libro 3","valdelomar",1952),("libro 4","alegria",1972)]
 
     for t,a,an in books:
-        Libro(t,a,an)
+        Libro(t,a,an,"accion")
 
     Libro.mostrar_libros()
 
-    prod = [("jabon",2.2,1),("cafe",3.3,3),
-            ("azucar",4.4,1),("chocolate",3.4,3)]
+    prod = [("jabon",2.2,1,10),("cafe",3.3,12,10),
+            ("azucar",4.4,1,10),("chocolate",3.4,20,10)]
 
 
-    for n,p,q in prod:
-        Inventory.agregar_producto(Product(n,p,q))
+    for n,p,q,u  in prod:
+        Inventory.agregar_producto(Product(n,p,q,u))
 
-    print(Inventory.buscar_producto("Azucar"))
+    print(Inventory.buscar_producto("azucar"))
     print(Inventory.summar_precios())
 
+    print("alerta de productos")
+    for x in Inventory.productos_alerta():
+        print(x.name)
+
+    Inventory.vender("chocolate",4)
+    Inventory.restock("jabon",20)
+    print("alerta de productos 2")
+    for x in Inventory.productos_alerta():
+        print(x.name)
 
     c = Cuadrado(1)
     c.lado = 2
