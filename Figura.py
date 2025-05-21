@@ -7,6 +7,10 @@ class Figura(ABC):
     def area(self):
        pass
 
+    @abstractmethod
+    def perimetro(self):
+        pass
+
     @staticmethod
     def validaParam(value):
         if type(value) != int and type(value) != float:
@@ -28,7 +32,10 @@ class Circulo(Figura):
         self.radio = radio
 
     def area(self):
-        return (self._radio**2)*math.pi
+        return  round( (self._radio**2)*math.pi)
+
+    def perimetro(self):
+        return round( 2*self._radio*math.pi)
 
 
 
@@ -47,8 +54,10 @@ class Cuadrado(Figura):
         self.lado = value
 
     def area(self):
-        return self._lado**2
+        return round(self._lado**2)
 
+    def perimetro(self):
+        return round(4*self._lado)
 
 class Triangulo(Figura):
 
@@ -74,4 +83,9 @@ class Triangulo(Figura):
         self._base = value
 
     def area(self):
-        return self._altura*self._base/2
+        return round( self._altura*self._base/2)
+
+    def perimetro(self):
+        return round(self.base + self.altura + math.sqrt(self.base**2 + self.altura**2))
+
+
