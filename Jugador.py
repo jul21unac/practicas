@@ -23,11 +23,15 @@ class Jugador:
     @nombre.setter
     def nombre(self,value):
         self._nombre = value
+    @property
+    def vida_inicial(self):
+        return self._vida_inicial
 
     def __init__(self, vida, ataque, nombre):
         self._vida = vida
         self._ataque = ataque
         self._nombre = nombre
+        self._vida_inicial = vida
 
 
     def recibe_ataque(self,value):
@@ -35,7 +39,7 @@ class Jugador:
 
     def atacar(self, jugador, atq):
         jugador.recibe_ataque(atq)
-        print(jugador)
+
 
     def __str__(self):
         return f'Jugador({self.vida},{self.nombre})'
