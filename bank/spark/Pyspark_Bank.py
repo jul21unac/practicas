@@ -1,10 +1,8 @@
 
-from BankAccount import BankAccount
+from bank.model.BankAccount import BankAccount
 from random import choice, randrange
 
 from pyspark.sql import SparkSession
-from pyspark.sql import functions as f
-from lib.logger import Log4J
 
 
 def createBankAccounts(l_cantidad , tipo_cuenta):

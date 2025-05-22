@@ -1,6 +1,4 @@
-import sys
-
-from BankAccount import BankAccount
+from bank.model.BankAccount import BankAccount
 from Coche import Coche
 from Figura import Cuadrado
 from Gato import Gato
