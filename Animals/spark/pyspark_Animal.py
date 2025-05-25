@@ -1,12 +1,10 @@
 from random import randrange
 from random import choice
-from pyspark.sql import SparkSession, Window , window
+from pyspark.sql import SparkSession, Window
 from pyspark.sql import functions as f
 
-from Gato import Gato
-from Perro import Perro
-from Rectangulo import Rectangulo
-from lib.logger import Log4J
+from Animals.model.Gato import Gato
+from Animals.model.Perro import Perro
 
 
 def generate_animals(cantidad):

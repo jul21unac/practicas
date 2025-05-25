@@ -2,7 +2,7 @@ from random import randrange
 from random import choice
 from pyspark.sql import SparkSession, Window
 from pyspark.sql import functions as f
-from Persona import Persona
+from people.model.Persona import Persona
 from lib.logger import Log4J
 
 def generatePeople(cantidad, ciudades):

@@ -1,16 +1,16 @@
 from bank.model.BankAccount import BankAccount
-from Coche import Coche
-from Figura import Cuadrado
-from Gato import Gato
-from Inventory import Inventory
-from Juego import Juego
-from Libro import Libro
-from Perro import Perro
-from Persona import Persona
-from Product import Product
+from car.model.Coche import Coche
+from figure.model.Figura import Cuadrado
+from Animals.model.Gato import Gato
+from inventory.model.Inventory import Inventory
+from game.model.Juego import Juego
+from book.model.Libro import Libro
+from Animals.model.Perro import Perro
+from people.model.Persona import Persona
+from inventory.model.Product import Product
 import random
 
-from Rectangulo import Rectangulo
+from rectangle.model.Rectangulo import Rectangulo
 
 if __name__ == '__main__':
     julio = Persona("Julio",43,"MAdrid" )

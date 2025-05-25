@@ -1,9 +1,9 @@
 from random import randrange
 from random import choice
-from pyspark.sql import SparkSession, Window , window
+from pyspark.sql import SparkSession
 from pyspark.sql import functions as f
 
-from Libro import Libro
+from book.model.Libro import Libro
 
 
 def generate_books(quantity):

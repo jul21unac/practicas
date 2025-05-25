@@ -1,4 +1,4 @@
-from Jugador import Jugador
+from game.model.Jugador import Jugador
 from random import randrange
 
 class Juego:

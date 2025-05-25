@@ -1,7 +1,7 @@
 import unittest
 
-from Inventory import Inventory
-from Product import Product
+from inventory.model.Inventory import Inventory
+from inventory.model.Product import Product
 
 
 class MyTestCase(unittest.TestCase):
@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
 
         Inventory._productos =[]
         for n,p,q in prod:
-            Inventory.agregar_producto(Product(n, p, q))
+            Inventory.agregar_producto(Product(n, p, q,10))
 
         self.busqueda =Inventory.buscar_producto("Azucar")
         self.suma = Inventory.summar_precios()
@@ -26,11 +26,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_precio(self):
         with self.assertRaises (ValueError):
-            Product("Bolivar jabon", -10,5)
+            Product("Bolivar jabon", -10,5,20)
 
     def test_precio_type(self):
         with self.assertRaises (TypeError):
-            Product("marsella jabon", "aaa",5)
+            Product("marsella jabon", "aaa",5,30)
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,17 +1,13 @@
 from random import randrange
-from random import choice
 
 from pyspark.ml.regression import LinearRegression
-from pyspark.sql import SparkSession, Window
-from pyspark.sql import functions as f
+from pyspark.sql import SparkSession
 
-from Figura import Cuadrado, Circulo, Triangulo
-from Rectangulo import Rectangulo
+from figure.model.Figura import Cuadrado, Circulo, Triangulo
 from lib.logger import Log4J
 
 from pyspark.ml.feature import VectorAssembler
-from pyspark.ml.classification import LogisticRegression
-from pyspark.ml.evaluation import BinaryClassificationEvaluator, RegressionEvaluator
+from pyspark.ml.evaluation import RegressionEvaluator
 
 
 def generateCuadrado(cantidad):

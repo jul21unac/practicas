@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.streaming import StreamingContext
-from Inventory import Inventory  # Tus clases originales
-from Product import Product
+from inventory.model.Inventory import Inventory  # Tus clases originales
+from inventory.model.Product import Product
 import json
 
 from lib.logger import Log4J

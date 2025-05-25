@@ -1,4 +1,4 @@
-from Animal import Animal
+from Animals.model.Animal import Animal
 
 
 class Perro(Animal):

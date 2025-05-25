@@ -1,9 +1,8 @@
 from random import randrange
 from random import choice
-from pyspark.sql import SparkSession, Window
-from pyspark.sql import functions as f
+from pyspark.sql import SparkSession
 
-from Rectangulo import Rectangulo
+from rectangle.model.Rectangulo import Rectangulo
 from lib.logger import Log4J
 
 def generateRectangle(cantidad, colorList):

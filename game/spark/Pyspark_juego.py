@@ -1,16 +1,9 @@
-from random import randrange
-
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as f
 
-from Juego import Juego
-from User import User
+from game.model.Juego import Juego
 from lib.logger import Log4J
-import secrets
-import string
 
-from dateutil.relativedelta import relativedelta
-from datetime import datetime
 
 def generate_Game(quantity):
     list_juego = []

@@ -2,7 +2,7 @@ from random import randrange
 
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as f
-from User import User
+from users.User import User
 from lib.logger import Log4J
 import secrets
 import string
