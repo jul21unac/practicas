@@ -1,6 +1,6 @@
 import unittest
 
-from users.User import User
+from src.users.User import User
 
 
 class MyTestCase(unittest.TestCase):

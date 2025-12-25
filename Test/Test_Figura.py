@@ -1,6 +1,6 @@
 import unittest
 
-from figure.model.Figura import Circulo, Cuadrado, Triangulo
+from src.figure.model.Figura import Circulo, Cuadrado, Triangulo
 
 
 class MytestFigura(unittest.TestCase):

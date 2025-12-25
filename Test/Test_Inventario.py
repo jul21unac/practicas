@@ -1,7 +1,7 @@
 import unittest
 
-from inventory.model.Inventory import Inventory
-from inventory.model.Product import Product
+from src.inventory.model.Inventory import Inventory
+from src.inventory.model.Product import Product
 
 
 class MyTestCase(unittest.TestCase):

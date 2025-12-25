@@ -1,6 +1,6 @@
 import unittest
 
-from rectangle.model.Rectangulo import Rectangulo
+from src.rectangle.model.Rectangulo import Rectangulo
 
 
 class TestRectangulo(unittest.TestCase):
